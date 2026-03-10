@@ -1,0 +1,45 @@
+<!--  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEURAL-RAG | Intelligence Portal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-area">
+                <h1>NEURAL-RAG <span class="version">v2.0</span></h1>
+            </div>
+            <div class="status-indicator">
+                <span id="statusText">OFFLINE</span>
+                <div class="status-dot" id="statusDot"></div>
+            </div>
+        </header>
+
+        <div class="upload-section">
+            <div class="file-box">
+                <input type="file" id="pdfInput" accept="application/pdf">
+                <button id="uploadBtn">INITIALIZE SCAN</button>
+            </div>
+            <div id="progressContainer">
+                <div id="progressBar"></div>
+            </div>
+            <p id="uploadStatus">Waiting for local PDF data...</p>
+        </div>
+
+        <div id="chat" class="chat-area">
+            <div class="message ai">System Ready. Please feed document into the neural buffer.</div>
+        </div>
+
+        <div class="input-section">
+            <input type="text" id="questionInput" placeholder="SYSTEM LOCKED: UPLOAD PDF" disabled>
+            <button id="sendBtn" disabled>QUERY</button>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
